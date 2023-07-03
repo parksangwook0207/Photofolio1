@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    [SerializeField] private Transform player;
-    Vector3 camera;
+    [SerializeField] private Transform player; // 카메라 딱 이동
+    
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        camera = transform.position - player.position;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.position + camera;
+        Vector3 vec3 = transform.position;
+        vec3.x = 1;
+        vec3.y = 1;
+        vec3.z = 1;
+
+        vec3 = transform.position;
     }
 }

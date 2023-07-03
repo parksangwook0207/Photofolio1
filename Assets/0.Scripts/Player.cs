@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,6 @@ public class Player : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        transform.Translate(new Vector3(x, y, 0f) * Time.deltaTime * speed); 
+        transform.Translate(new Vector3(x, y, 0f) * Time.deltaTime * speed);
     }
 }
